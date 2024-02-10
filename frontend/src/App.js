@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-import Entries from "./components/tracker/Entries";
+import Entries from "./components/Tracker/Entries";
 import Footer from "./components/footer/Footer.jsx";
 import QuoteOne from "./components/quoteOne/QuoteOne.jsx";
 import Me from "./components/me/Me.jsx";
@@ -12,13 +12,15 @@ import Caltech from "./components/caltech/Caltech";
 function App() {
   return (
     <>
-      <Navbar />
-      <Caltech />
-      <QuoteOne />
-      <Me />
-      <QuoteTwo />
-      <Entries />
-      <Footer />
+      <div className="all">
+        <Navbar />
+        <Caltech />
+        <QuoteOne />
+        <Me />
+        {/* <QuoteTwo /> */}
+        <Entries />
+        <Footer />
+      </div>
     </>
   );
 }

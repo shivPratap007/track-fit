@@ -1,14 +1,13 @@
-import React from 'react'
-import './quoteone.css'
+import React from "react";
+import "./quoteone.css";
 
 export default function QuoteOne() {
   return (
     <>
-    <div className="quote-box">
-      <div className="quote-text">
-      “Take care of your body; it's the only place you have for living”
-      </div>
+      <div className="quoteOne">
+        Health is a state of complete physical, mental, and social well-being,
+        not merely the absence of disease or infirmity.
       </div>
     </>
-  )
+  );
 }

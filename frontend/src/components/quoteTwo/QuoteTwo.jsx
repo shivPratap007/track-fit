@@ -6,7 +6,7 @@ export default function QuoteTwo() {
     <>
     <div className="quote-box">
       <div className="quote-text">
-      "Let us gift ourselves and our body, the most important gift - health”
+      "Fat ass bitch!!!!!!!!!!!!!”
       </div>
       </div>
     </>
