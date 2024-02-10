@@ -8,6 +8,10 @@ require('dotenv').config()
 // basic middlewares
 app.use(express.json());
 
+// create user
+const userRouter=require('./routes/userRoutes');
+app.use('/v1',userRouter);
+
 
 app.get('/test',(req,res)=>{
     res.status(200).json({
