@@ -8,6 +8,7 @@ function App(){
   return (
     <>
     <Navbar />
+    <h1>Super Image</h1>
     <Procarousel />
     <Button>Log In!</Button>
     </>
