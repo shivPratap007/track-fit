@@ -1,5 +1,6 @@
 const express=require('express');
-const database=require('./config/database')
+const database=require('./config/database');
+const cors=require('cors');
 
 const app=express();
 
@@ -7,6 +8,7 @@ require('dotenv').config()
 
 // basic middlewares
 app.use(express.json());
+app.use(cors())
 
 // create user
 const userRouter=require('./routes/userRoutes');
