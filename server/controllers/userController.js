@@ -1,15 +1,14 @@
 const mongoose = require("mongoose");
 const userModel = require("../models/userModels");
-const {userVerify}=require('../dataVerifier/userData');
+const {userVerify,login}=require('../dataVerifier/userData');
 
 const createUser = async (req, res, next) => {
   try {
-    const { name, email, password } = req.body;
     const createPayload=req.body;
     const parsePayload=userVerify.safeParse(createPayload);
     if(!parsePayload.success){
         res.status(411).json({
-            message:"You have send the wrond inputs",
+            message:"You have send the wrong inputs",
         })
         return;
     }
@@ -34,6 +33,32 @@ const createUser = async (req, res, next) => {
   }
 };
 
+const loginUser=async (req,res,next)=>{
+    const createPayload=req.body;
+    console.log(createPayload);
+    const parsePayload=login.safeParse(createPayload);
+    if(!parsePayload.success){
+        res.status(411).json({
+            message:"You have send the wrong inputs",
+        })
+        return;
+    }
+    const user= await userModel.findOne({email:createPayload.email});
+    if(user){
+        return res.status(200).json({
+            status:true,
+            user:user,
+        })
+    }else{
+        return res.status(401).json({
+            status:false,
+            message:"user not found",
+        })
+    }
+
+}
+
 module.exports={
     createUser,
+    loginUser,
 }

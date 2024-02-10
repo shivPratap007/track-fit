@@ -6,6 +6,11 @@ const userVerify = z.object({
     email:z.string(),
 });
 
+const login=z.object({
+    email:z.string(),
+})
+
 module.exports={
     userVerify,
+    login,
 }
