@@ -8,6 +8,7 @@ const userVerify = z.object({
 
 const login=z.object({
     email:z.string(),
+    password:z.string(),
 })
 
 module.exports={

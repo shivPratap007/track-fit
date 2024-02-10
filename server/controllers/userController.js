@@ -44,10 +44,9 @@ const loginUser=async (req,res,next)=>{
         return;
     }
     const user= await userModel.findOne({email:createPayload.email});
-    if(user){
+    if(user.password==createPayload.password){
         return res.status(200).json({
             status:true,
-            user:user,
         })
     }else{
         return res.status(401).json({
