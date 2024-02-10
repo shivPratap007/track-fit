@@ -19,7 +19,7 @@ function App() {
 
         <Routes>
           <Route path="/login" element={
-                  <Login />          
+                  <LoginPage />          
           } />
           <Route
             path="/"
