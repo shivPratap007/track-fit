@@ -22,10 +22,10 @@ code {
   font-weight: 500;
 }
 main {
-  /* padding: 3rem 0; */
+  margin-left: 7rem;
   align-items: center;
   background-color: #fafafa;
-  width: 80%;
+  width: 70%;
 }
 /* footer */
 .text-white {
@@ -130,7 +130,7 @@ footer ul li a {
 }
 
 .card-cover{
-  display: flex;
+  margin-left: 10rem;
 }
 
 .card {
