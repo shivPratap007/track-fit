@@ -14,6 +14,7 @@ import BMI from "./components/BMI/bmi.jsx";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <div className="all">
         <Routes>
