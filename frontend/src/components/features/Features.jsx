@@ -1,5 +1,5 @@
 import Card from "./Card";
-function Services() {
+function Features() {
   return (
     <div className="container services">
         <h2 className="main-title text-center">SERVICES</h2>
@@ -21,4 +21,4 @@ function Services() {
     </div>
   );
 }
-export default Services;
+export default Features;
