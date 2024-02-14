@@ -11,12 +11,12 @@
   }
   
   /* Style for the button when hovered */
-  button:hover {
+  .bbutton:hover {
     background-color: #1fa524; /* Darker blue */
   }
   
   /* Style for the link inside the button */
-  button a {
+  .bbutton a {
     color: white;
     text-decoration: none;
   }

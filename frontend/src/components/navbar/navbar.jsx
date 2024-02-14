@@ -34,7 +34,7 @@ export default function Navbar() {
             <a href="https://github.com/1Shubham7/code-buddy">GitHub</a>
           </p>
           <div className="navbar-sign">
-            <button type="button" id="btn">
+            <button type="button" id="btn" className="login-button">
               <Link to="/login">Login</Link>
             </button>
           </div>
