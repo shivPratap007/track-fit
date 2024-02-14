@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -21,7 +22,12 @@ export default function Navbar() {
             <a href="#about">About</a>
           </p>
           <p>
-            <a href="https://mission-health-blog-v1.netlify.app/" target="_blank">Blogs</a>
+            <a
+              href="https://mission-health-blog-v1.netlify.app/"
+              target="_blank"
+            >
+              Blogs
+            </a>
           </p>
 
           <p>
@@ -29,7 +35,7 @@ export default function Navbar() {
           </p>
           <div className="navbar-sign">
             <button type="button" id="btn">
-              Log In
+              <Link to="/login">Login</Link>
             </button>
           </div>
         </div>

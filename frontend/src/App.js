@@ -14,21 +14,20 @@ import BMI from "./components/BMI/BMI.jsx";
 
 function App() {
   return (
-    <>
+    
+    <BrowserRouter>
       <div className="all">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-
-            <Route path="/" element={<Home />}>
-              <Route index element={<Home />} />
-              {/* <Route path="blogs" element={<Blogs />} />
-              <Route path="contact" element={<Contact />} /> */}
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/bmi" element={<BMI />} />
+          <Route path="/" element={<Home />}>
+            <Route index element={<Home />} />
+            {/* <Route path="blogs" element={<Blogs />} />
+            <Route path="contact" element={<Contact />} /> */}
+          </Route>
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
