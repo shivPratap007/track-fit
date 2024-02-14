@@ -4,9 +4,13 @@ import "./button.css"
 
 const BmiButton = () => {
   return (
-    <button className='bbutton'>
+    <>
+    <center>
+    <button className='bbutton' style={{marginTop:'5rem', marginBottom:'5rem'}}>
         <Link to="/bmi">Calculate BMI</Link>
     </button>
+    </center>
+    </>
   )
 }
 

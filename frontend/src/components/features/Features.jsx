@@ -2,7 +2,7 @@ import Card from "./Card";
 function Features() {
     return (
         <div className=" services">
-            <h2 className="main-title text-center">Features</h2>
+            <h2 style={{paddingLeft:'4rem'}} className="main-title text-center">Features</h2>
             
             <div className="card-cover">
             <center>

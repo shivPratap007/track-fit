@@ -7,7 +7,10 @@ function Main() {
     <>
       <main>
       <About />
+      <br></br>
       <Services />
+      <br></br>
+      <br></br>
       </main>
     </>
   );

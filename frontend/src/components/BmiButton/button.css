@@ -1,5 +1,5 @@
 .bbutton {
-    background-color: #38c23f; /* Blue */
+    background-color: #38c23f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -7,7 +7,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-left: 10rem;
+    font-size: x-large;
   }
   
   /* Style for the button when hovered */
