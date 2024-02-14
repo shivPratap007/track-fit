@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./login.css";
+import Navbar from "../navbar/navbar.jsx";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +19,7 @@ const LoginPage = () => {
 
   async function checkLogin(data) {
     try {
-        console.log(data);
+      console.log(data);
       const response = await axios.post("http://localhost:5111/v1/login", {
         email: data.email,
         password: data.password,
@@ -31,94 +33,52 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-      </form>
+    <>
+    <div className="asli">
+    <Navbar />
+    <div className="main">
+    <div className="container main-container">
+      <div className="content">
+        <h2 className="titleContainer">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3 inputContainer">
+            <label htmlFor="email" className="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              className="form-control inputBox"
+              id="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3 inputContainer">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control inputBox"
+              id="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Login
+          </button>
+        </form>
+      </div>
+      </div>
     </div>
+    </div>
+    </>
   );
 };
 
 export default LoginPage;
-
-
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const Login = (props) => {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [emailError, setEmailError] = useState("")
-    const [passwordError, setPasswordError] = useState("")
-    
-    const navigate = useNavigate();
-        
-    const onButtonClick = () => {
-        // You'll update this function later...
-    }
-
-    return <div className={"mainContainer"}>
-        <div className={"titleContainer"}>
-            <div>Login</div>
-        </div>
-        <br />
-        <div className={"inputContainer"}>
-            <input
-                value={email}
-                placeholder="Enter your email here"
-                onChange={ev => setEmail(ev.target.value)}
-                className={"inputBox"} />
-            <label className="errorLabel">{emailError}</label>
-        </div>
-        <br />
-        <div className={"inputContainer"}>
-            <input
-                value={password}
-                placeholder="Enter your password here"
-                onChange={ev => setPassword(ev.target.value)}
-                className={"inputBox"} />
-            <label className="errorLabel">{passwordError}</label>
-        </div>
-        <br />
-        <div className={"inputContainer"}>
-            <input
-                className={"inputButton"}
-                type="button"
-                onClick={onButtonClick}
-                value={"Log in"} />
-        </div>
-    </div>
-}
-
-export default Login
