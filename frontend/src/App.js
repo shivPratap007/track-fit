@@ -10,7 +10,7 @@ import Me from "./components/me/Me.jsx";
 import QuoteTwo from "./components/quoteTwo/QuoteTwo.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Caltech from "./components/caltech/Caltech";
-import BMI from "./components/BMI/BMI.jsx";
+import BMI from "./components/BMI/bmi.jsx";
 
 function App() {
   return (
