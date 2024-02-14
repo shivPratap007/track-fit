@@ -1,9 +1,9 @@
 function About() {
     return (
       <>
-        <div style={{marginTop:'15rem',width:'100%',height:'10px'}} className="about-scroll"></div>
+        <div style={{marginTop:'3rem',width:'50%',height:'10px', marginLeft:'-3rem'}} className="about-scroll"></div>
   
-        <div className="container about">
+        <div className=" about">
           <div className="row">
             <div className="col-md-6 text-center">
               <img alt="about" src="./img/img1.png" className="img-fluid" />

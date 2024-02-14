@@ -5,8 +5,7 @@ import QuoteOne from '../quoteOne/QuoteOne';
 import Me from '../me/Me';
 import Footer from '../footer/Footer';
 import BmiButton from '../BmiButton/BmiButton';
-import Features from '../features/Features';
-import About from '../About/About';
+import Main from '../Main/Main';
 
 const Home = () => {
   return (
@@ -14,8 +13,7 @@ const Home = () => {
     <Navbar/>
     <Caltech/>
     <QuoteOne />
-    <About />
-    <Features />
+    <Main />
 
     <Me />
     <BmiButton/>
