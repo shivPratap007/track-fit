@@ -27,7 +27,7 @@ const Entries =() =>{
     }
 
     return(
-        <div>
+        <div className='container'>
             <Container>
         <Button onClick={() => setAddNewEntry(true)}>Track today's calories</Button>
             </Container>

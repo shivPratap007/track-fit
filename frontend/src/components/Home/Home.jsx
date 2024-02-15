@@ -18,6 +18,9 @@ const Home = () => {
     <Main />
 
     <Me />
+    <br></br>
+    <br></br>
+    <br></br>
     <Entries />
     <BmiButton/>
     {/* <IdealWeight/> */}
