@@ -2,7 +2,7 @@
 
 .quote-text{
     width:100%;
-    background-color: #3F7F54;
+    background-color: #92c8a4;
     font-family: Jolly Lodger;
     font-size: 4.0625rem;
     font-style: normal;
@@ -18,11 +18,10 @@
     width:100vw;
 }
 .quoteOne{
-    background-color: #193B26;
-    width:100%;
+    width:70%;
     height: 30vh;
     font-size:xx-large;
-    color:white;
+    color:rgb(0, 0, 0);
     padding:100px;
     display: flex;
     justify-content: center;

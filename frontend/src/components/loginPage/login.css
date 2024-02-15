@@ -1,0 +1,45 @@
+/* Additional CSS for navbar, colors, and animations */
+
+.main{
+    margin-top: 220px;
+}
+
+.asli{
+  
+  background-color: #c6ffe0;
+  padding-bottom: 16rem;
+}
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .main-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .titleContainer {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .inputBox {
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputBox:focus {
+    border-color: #007bff;
+  }
+  
