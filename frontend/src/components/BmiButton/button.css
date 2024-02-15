@@ -1,0 +1,23 @@
+.bbutton {
+    background-color: #38c23f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: x-large;
+  }
+  
+  /* Style for the button when hovered */
+  .bbutton:hover {
+    background-color: #1fa524; /* Darker blue */
+  }
+  
+  /* Style for the link inside the button */
+  .bbutton a {
+    color: white;
+    text-decoration: none;
+  }
+  

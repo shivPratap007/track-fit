@@ -5,6 +5,11 @@ a {
   text-decoration: none;
 }
 
+.login-button{
+  background-color: white;
+  color:black;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -64,10 +69,6 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-#btn{
-    background-color: white;
-    color:black;
 }
 
 .navbar-links_container p,
