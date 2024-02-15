@@ -49,6 +49,7 @@ export default function BMI() {
           <div style={{border:"2px solid black",padding:"50px",borderRadius:"20px", boxShadow:"5px 5px 5px black"}}>
             <div>BMI : {bmiData.data.bmi} </div>
             <div>Health : {bmiData.data.health}</div>
+            if
             <button style={{borderRadius:"5px",marginTop:"5px"}}>
               <Link to="/bmi"> Calculate again</Link>
             </button>
