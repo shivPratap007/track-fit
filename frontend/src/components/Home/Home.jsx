@@ -5,6 +5,7 @@ import QuoteOne from '../quoteOne/QuoteOne';
 import Me from '../me/Me';
 import Footer from '../footer/Footer';
 import BmiButton from '../BmiButton/BmiButton';
+import IdealWeight from '../IdealWeight/IdealWeight';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
 
     <Me />
     <BmiButton/>
+    <IdealWeight/>
     <Footer />
 
     </>

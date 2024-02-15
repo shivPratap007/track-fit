@@ -11,6 +11,7 @@ import QuoteTwo from "./components/quoteTwo/QuoteTwo.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Caltech from "./components/caltech/Caltech";
 import BMI from "./components/BMI/bmi.jsx";
+import IdealWeightForm from "./components/IdealWeightForm/IdealWeightForm.jsx";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/bmi" element={<BMI />} />
+          <Route path="/idealWeight" element={<IdealWeightForm/>} />
+
           <Route path="/" element={<Home />}>
             <Route index element={<Home />} />
             {/* <Route path="blogs" element={<Blogs />} />
