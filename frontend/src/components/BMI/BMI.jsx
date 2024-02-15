@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../navbar/navbar";
 
 export default function BMI() {
   const [age, setAge] = useState("");
@@ -44,56 +45,82 @@ export default function BMI() {
   console.log(bmiData, "===");
   return (
     <>
-      {Object.keys(bmiData).length !== 0 ? (
-        <div style={{height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
-          <div style={{border:"2px solid black",padding:"50px",borderRadius:"20px", boxShadow:"5px 5px 5px black"}}>
-            <div>BMI : {bmiData.data.bmi} </div>
-            <div>Health : {bmiData.data.health}</div>
-            <button style={{borderRadius:"5px",marginTop:"5px"}}>
-              <Link to="/bmi"> Calculate again</Link>
+      <div>
+        {Object.keys(bmiData).length !== 0 ? (
+          <div>
+            <Navbar/>
+            <div
+              style={{
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop:"10px",
+              }}
+            >
+              <div
+                style={{
+                  border: "2px solid black",
+                  padding: "50px",
+                  borderRadius: "20px",
+                  boxShadow: "5px 5px 5px black",
+                }}
+              >
+                <div>BMI : {bmiData.data.bmi} </div>
+                <div>Health : {bmiData.data.health}</div>
+                <div>Start eating healthy food</div>
+                <div>Try to do exercise daily</div>
+                <button style={{ borderRadius: "5px", marginTop: "5px" }} onClick={Object.keys(bmiData).length == 0}>
+                  <Link to="/bmi"> Calculate again</Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Age</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter age"
+                onChange={(e) => setAge(e.target.value)}
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Weight</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter weight"
+                onChange={(e) => setWeight(e.target.value)}
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Height</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter height"
+                onChange={(e) => setHeight(e.target.value)}
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onClick={() => check()}
+            >
+              Submit
             </button>
           </div>
-        </div>
-      ) : (
-        <div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Age</label>
-            <input
-              type="number"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter age"
-              onChange={(e) => setAge(e.target.value)}
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Weight</label>
-            <input
-              type="number"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter weight"
-              onChange={(e) => setWeight(e.target.value)}
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Height</label>
-            <input
-              type="number"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter height"
-              onChange={(e) => setHeight(e.target.value)}
-            />
-          </div>
-          <button type="submit" class="btn btn-primary" onClick={() => check()}>
-            Submit
-          </button>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }

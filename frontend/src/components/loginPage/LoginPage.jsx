@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./login.css";
 import Navbar from "../navbar/navbar.jsx";
@@ -6,6 +7,9 @@ import Navbar from "../navbar/navbar.jsx";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const[login,setLogin]=useState(false)
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,12 +30,20 @@ const LoginPage = () => {
       });
 
       const token = response.data;
-      console.log(token);
+      // setLogin(token);
+      console.log(token.status);
+      setLogin(token.status);
     } catch (error) {
       console.error("Login failed:", error);
     }
   }
-
+  console.log("===",login);
+  useEffect(()=>{
+    if(login){
+      alert("Login successfully");
+      navigate('/')
+    }
+  },[login])
   return (
     <>
     <div className="asli">
