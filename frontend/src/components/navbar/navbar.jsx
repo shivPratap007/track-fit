@@ -13,11 +13,11 @@ export default function Navbar() {
           <div className="coding-buddy">
             <a href="#home">Mission Health</a>
           </div>
-          <p>
+          {/* <p>
             <a href="#facb" id="facb">
               Search mentor
             </a>
-          </p>
+          </p> */}
           <p>
             <a href="#about">About</a>
           </p>
@@ -66,9 +66,9 @@ export default function Navbar() {
               <p>
                 <a href="#home">Coding Buddy</a>
               </p>
-              <p>
+              {/* <p>
                 <a href="#facb">Find a Coding Buddy</a>
-              </p>
+              </p> */}
               <p>
                 <a href="#about">About</a>
               </p>
