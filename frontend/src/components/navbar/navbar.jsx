@@ -38,6 +38,11 @@ export default function Navbar() {
               <Link to="/login">Login</Link>
             </button>
           </div>
+          <div className="navbar-sign">
+            <button type="button" id="btn" className="login-button">
+              <Link to="/signup">Signup</Link>
+            </button>
+          </div>
         </div>
       </div>
 

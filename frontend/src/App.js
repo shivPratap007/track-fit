@@ -8,10 +8,11 @@ import Footer from "./components/footer/Footer.jsx";
 import QuoteOne from "./components/quoteOne/QuoteOne.jsx";
 import Me from "./components/me/Me.jsx";
 import QuoteTwo from "./components/quoteTwo/QuoteTwo.jsx";
-import Navbar from "./components/navbar/Navbar.jsx";
+import Navbar from "./components/navbar/navbar.jsx";
 import Caltech from "./components/caltech/Caltech";
 import BMI from "./components/BMI/bmi.jsx";
 import IdealWeightForm from "./components/IdealWeightForm/IdealWeightForm.jsx";
+import { Signup } from "./components/signup/signup.jsx";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/bmi" element={<BMI />} />
           <Route path="/idealWeight" element={<IdealWeightForm/>} />
+          <Route path="/signup" element={<Signup/>} />
 
           <Route path="/" element={<Home />}>
             <Route index element={<Home />} />
